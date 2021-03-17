@@ -94,6 +94,8 @@ function mouseReleased(){
 
 function keyPressed(){
     if(keyCode === 32){
+        bird.trajectory = [];
+        Matter.Body.setPosition(bird.body, {x:200, y:40})
        slingshot.attach(bird.body);
     }
 }
@@ -115,3 +117,18 @@ async function getBackgroundImg(){
     backgroundImg = loadImage(bg);
     console.log(backgroundImg);
 }
+
+/*
+tip and tricks for debugging
+1) not panic
+2) check for 1the console
+*undefined variable
+*misuse of a function
+*improper declaration of varibale either local or global.
+3)commenting helps
+4)print certain information.(here we use console)
+5)console 
+
+structuring the code, proper commenting, good spaces.*/
+
+
